@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "07acb198afbf3fa2",
+    "type": "split",
+    "children": [
+      {
+        "id": "41b9a77a665a11a6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Advanced Array Methods.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "aee036c0dcfbbdc5",
+    "type": "split",
+    "children": [
+      {
+        "id": "414c7537478bf7f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "013aa19feb23f005",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "400c1cbbf4f66420",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0eeeea8142e8a8ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "655cd2c8dbad1fc5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "74b68b3ab46a6516",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Advanced Array Methods.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "41b9a77a665a11a6",
+  "lastOpenFiles": [
+    "Advanced Array Methods.md",
+    "Untitled.md"
+  ]
+}
