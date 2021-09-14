@@ -39,4 +39,30 @@
     padding: 0.25rem 0.5rem;
     border-radius: $radius;
   }
+
+  .delete-btn{
+    display: block;
+    width: 200px;
+    margin: 1rem auto 0 auto;
+    color: $clr-red-dark;
+    letter-spacing: $spacing;
+    background: transparent;
+    border: 1px solid $clr-red-dark;
+    padding: 0.25rem 0.5rem;
+    border-radius: $radius;
+    transition: $transition;
+
+    &:hover{
+      color: $clr-white;
+      background: $clr-red-dark;
+    }
+  }
+}
+
+button{
+  color: $clr-primary-4;
+  padding-left: 0.5rem;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  font-weight: bold;
 }

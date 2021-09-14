@@ -1,0 +1,26 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.pages-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  
+  &:last-of-type {
+    margin: 2rem 0;
+  }
+
+  button {
+    background: $clr-white;
+    border-radius: $radius;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  p {
+    font-weight: bolder;
+    font-size: 1.2rem;
+  }
+}

@@ -1,19 +1,20 @@
 import React, { useState, useContext} from 'react'
 import { useFetch } from './useFetch'
 
-const MovieContext = React.createContext()
+const StoryContext = React.createContext()
 
-export const MovieProvider = ({children}) => {
-  const [query, setQuery] = useState("batman")
-  const { movies, error, loading } = useFetch(`s=${query}&`)
+export const StoryProvider = ({children}) => {
+  const [query, setQuery] = useState("React")
+  const [page, setPage] = useState(0)
+  const { stories, setStories, error, loading, maxPages } = useFetch(`query=${query}&page=${page}&tags=story`)
   // {console.log(`${movies} #4`)}
 
-  return <MovieContext.Provider value={{query, setQuery, loading, movies, error}} >
+  return <StoryContext.Provider value={{query, setQuery, loading, stories, setStories, error, page, setPage, maxPages}} >
     {children}
-    </MovieContext.Provider>
+    </StoryContext.Provider>
 
 }
 
-export const useMovieContext = () => {
-  return useContext(MovieContext)
+export const useStoryContext = () => {
+  return useContext(StoryContext)
 }

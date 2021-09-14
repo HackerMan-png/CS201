@@ -1,3 +1,4 @@
+import { wait } from "@testing-library/react";
 import React, { useState, useEffect } from "react";
 import Tours from "./Pages/Tours";
 
@@ -26,6 +27,10 @@ function App() {
     fetchTours();
   }, []);
 
+  const removeTour = (id) => {
+    setTours((oldTours) => oldTours.filter(tour => tour.id !== id))
+  }
+
   if (loading) {
     return <main className="section">
       <div className="spinner"></div>
@@ -39,9 +44,21 @@ function App() {
     </main>
   }
 
+  if (!tours.length){
+    return(
+      <main>
+        <div className="title">
+          <h2>No tours left</h2>
+          <div className="underline"></div>
+          <button className="btn" onClick={fetchTours}> Refresh </button>
+        </div>
+      </main>
+    )
+  }
+
   return(
   <main className="section">
-      <Tours tours={tours} />
+      <Tours tours={tours} removeTour={removeTour} fetchTours={fetchTours}/>
   </main>
   ) }
 

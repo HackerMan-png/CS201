@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-const API_ENDPOINT = `http://hn.algolia.com/api/v1/`;
+const API_ENDPOINT = `http://hn.algolia.com/api/v1/search?`;
 
 // searchQuery will be something like &s=batman
 export const useFetch = (searchQuery) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: "" });
-  const [movies, setMovies] = useState([]);
+  const [maxPages, setMaxPages] = useState(0)
+  const [stories, setStories] = useState([]);
 
   // url is always the API_ENDPOINT + the searchQuery
   const fetchMovie = async (url) => {
@@ -14,13 +15,9 @@ export const useFetch = (searchQuery) => {
       const response = await fetch(url);
       console.log(response);
       const data = await response.json();
-      if (data.Response === "True") {
-        setMovies(data.Search || data);
-        setError({show: false, msg: ""})
-      }else{
-        setError({show: true, msg: data.Error})
-      }
-      setLoading(false)
+      setStories(data.hits || []);
+      setMaxPages(data.nbPages || 0)
+      setLoading(false);
     } catch (error) {
       console.error(error);
     }
@@ -28,8 +25,8 @@ export const useFetch = (searchQuery) => {
 
   useEffect(() => {
     console.log(`${API_ENDPOINT}${searchQuery}`);
-    fetchMovie(`${API_ENDPOINT}${searchQuery}`)
-  }, [searchQuery])
+    fetchMovie(`${API_ENDPOINT}${searchQuery}`);
+  }, [searchQuery]);
 
-  return {loading, error, movies}
+  return { loading, error, stories, setStories, maxPages };
 };

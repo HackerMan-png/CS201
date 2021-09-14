@@ -1,0 +1,43 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+article{
+  background: $clr-white;
+  margin-bottom: 1rem;
+  box-shadow: $light-shadow;
+  padding: 1rem 1.5rem;
+  border: 1px solid $clr-primary-9;
+  border-radius: $radius;
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    align-items: center;
+    width: 100%;
+    max-width: 580px;
+    
+    h3{
+      font-size: 1rem;
+      font-weight: bold;
+      width: 80%;
+    }
+
+    button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      background: $clr-grey-9;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-left: 1rem;
+      align-self: center;
+      font-weight: 100;
+      color: $clr-primary-7;
+    }
+  }
+}

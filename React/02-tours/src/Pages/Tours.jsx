@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../Components/Item";
 
-const Tours = ({ tours }) => {
+const Tours = ({ tours, removeTour, fetchTours }) => {
   return (
     <div>
       <section className="tours">
@@ -11,9 +11,10 @@ const Tours = ({ tours }) => {
         </div>
         <div>
           {tours.map((tour) => {
-            return <Item key={tour.id} {...tour} />;
+            return <Item removeTour={removeTour} key={tour.id} {...tour} />;
           })}
         </div>
+        <button className="btn" onClick={fetchTours}> Refresh </button>
       </section>
     </div>
   );
