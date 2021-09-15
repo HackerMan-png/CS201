@@ -9,17 +9,20 @@
   .stories {
     padding-top: 1rem;
     width: 100%;
-    
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    justify-content: center;
+    align-items: center;
   }
 
   @include tablet {
     .stories {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(45vw, 45vw));
+      flex-direction: row;
+      align-items: normal;
+      justify-content: center;
     }
   }
 }

@@ -270,17 +270,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: center;
+  align-items: center;
 }
 @media only screen and (min-width: 768px) {
   .wrapper .stories {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(45vw, 45vw));
+    flex-direction: row;
+    align-items: normal;
+    justify-content: center;
   }
 }
 
 .story {
-  width: 45vw;
+  width: 80vw;
   background-color: #fff;
   border-radius: 0.25rem;
   padding: 2rem;
@@ -309,6 +312,17 @@ body {
   color: #ca1616;
 }
 
+@media only screen and (min-width: 768px) {
+  .story {
+    width: 45vw;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #95bde4;
+    font-weight: bolder;
+  }
+}
 .search-form {
   width: 90vw;
   max-width: 1170px;
