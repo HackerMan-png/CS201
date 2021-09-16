@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-const API_ENDPOINT = `http://hn.algolia.com/api/v1/search?`;
+const API_ENDPOINT = `https://hn.algolia.com/api/v1/search?`;
 
 // searchQuery will be something like &s=batman
 export const useFetch = (searchQuery) => {
