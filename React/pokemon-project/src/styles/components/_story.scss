@@ -1,0 +1,47 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.story{
+  width: 80vw;
+  background-color: $clr-white;
+  border-radius: $radius;
+  padding: 2rem;
+  // height: 13vw;
+  text-align: left;
+  position: relative;
+  h2{
+    font-size: 1.5rem;
+    color: $clr-primary-7;
+    font-weight: bolder;
+  }
+  
+  p{
+    font-size: 1.1rem;
+    color: $clr-primary-8;
+  }
+
+  .buttons{
+    position: absolute;
+    bottom: 1rem;
+    a {
+      color: $clr-black;
+      font-weight: bold;
+    }
+    button{
+      padding-left: 2rem;
+      color: $clr-red-dark;
+    }
+  }
+}
+
+@include tablet {
+  .story {
+    width: 45vw;
+  }
+  h2{
+    font-size: 1.5rem;
+    color: $clr-primary-7;
+    font-weight: bolder;
+  }
+}
