@@ -1,0 +1,43 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.pokemon-list {
+  width: 20vw;
+  .pokemon {
+    display: grid;
+    cursor: pointer;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 5vh;
+    width: 13vw;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+    &:hover {
+      background-color: $clr-primary-4;
+    }
+
+    .pokeName {
+      width: 10vw;
+      align-self: center;
+      // height: 100%;
+      margin: 0;
+      vertical-align: center;
+    }
+
+    .id {
+      text-align: right;
+      // height: inherit;
+      // align-self: baseline;
+      margin: 0;
+      // width: auto;
+    }
+
+    img {
+      position: relative;
+      right: 0;
+      width: 40px;
+    }
+  }
+}

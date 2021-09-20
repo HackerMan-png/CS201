@@ -282,6 +282,39 @@ body {
   }
 }
 
+.pokemon-list {
+  width: 20vw;
+}
+.pokemon-list .pokemon {
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  height: 5vh;
+  width: 13vw;
+  align-items: center;
+  justify-content: space-between;
+  width: 20vw;
+}
+.pokemon-list .pokemon:hover {
+  background-color: #3b85ce;
+}
+.pokemon-list .pokemon .pokeName {
+  width: 10vw;
+  align-self: center;
+  margin: 0;
+  vertical-align: center;
+}
+.pokemon-list .pokemon .id {
+  text-align: right;
+  margin: 0;
+}
+.pokemon-list .pokemon img {
+  position: relative;
+  right: 0;
+  width: 40px;
+}
+
 .story {
   width: 80vw;
   background-color: #fff;

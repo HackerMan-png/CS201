@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
-import { useAppContext } from "../util/context";
+import React, { useState } from 'react';
+import { useAppContext } from '../util/context';
 
 const SearchBar = () => {
-  const {query, setQuery, error, setShowPokemon} = useAppContext()
-  
+  const { query, setQuery, error, setShowPokemon } = useAppContext();
+
   return (
     <div>
-      <form onSubmit={(e) => e.preventDefault()} className="search-form">
+      <form onSubmit={(e) => e.preventDefault()} className='search-form'>
         <input
-          type="text"
-          className="form-input"
+          type='text'
+          className='form-input'
           value={query}
           onFocus={() => setShowPokemon(true)}
-          onBlur={() => setShowPokemon(false)}
+          // onBlur={() => setShowPokemon(false)}
           onChange={(e) => {
             setQuery(e.target.value);
           }}
         />
-        {error.show && <div className="error">{error.msg}</div>}
+        {error.show && <div className='error'>{error.msg}</div>}
       </form>
     </div>
   );
