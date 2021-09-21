@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
+import { pokemonListConst } from './consts';
 const API_ENDPOINT = `https://pokeapi.co/api/v2/`;
 
 // searchQuery will be something like &s=batman
 export const useFetch = (searchQuery) => {
   const [loading, setLoading] = useState(true);
-  const [pokemonList, setPokemonList] = useState([]);
+  const [pokemon, setPokemon] = useState([]);
+  const [pokemonList, setPokemonList] = useState(pokemonListConst);
+
   const [error, setError] = useState('');
 
   // url is always the API_ENDPOINT + the searchQuery
@@ -15,7 +18,7 @@ export const useFetch = (searchQuery) => {
       const response = await fetch(url);
       console.log(response);
       const data = await response.json();
-      setPokemonList(data.results || []);
+      setPokemon(data.results || []);
       setLoading(false);
     } catch (error) {
       console.error(error);
@@ -27,5 +30,5 @@ export const useFetch = (searchQuery) => {
     fetchPokemon(`${API_ENDPOINT}${searchQuery.toLowerCase()}`);
   }, []);
 
-  return { loading, error, pokemonList, setPokemonList };
+  return { loading, error, pokemonList, pokemon, setPokemon };
 };

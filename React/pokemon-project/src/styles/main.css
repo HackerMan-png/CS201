@@ -284,6 +284,10 @@ body {
 
 .pokemon-list {
   width: 20vw;
+  height: auto;
+  max-height: 30vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .pokemon-list .pokemon {
   display: grid;
@@ -299,6 +303,9 @@ body {
 .pokemon-list .pokemon:hover {
   background-color: #3b85ce;
 }
+.pokemon-list .pokemon:hover img {
+  transform: rotate(180deg);
+}
 .pokemon-list .pokemon .pokeName {
   width: 10vw;
   align-self: center;
@@ -313,6 +320,7 @@ body {
   position: relative;
   right: 0;
   width: 40px;
+  transition: all 0.1s linear;
 }
 
 .story {
@@ -357,7 +365,7 @@ body {
   }
 }
 .search-form {
-  width: 90vw;
+  width: 20vw;
   max-width: 1170px;
   margin: 0 auto;
   margin-top: 5rem;

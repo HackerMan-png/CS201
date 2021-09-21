@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Pokemon from '../Components/Pokemon';
 import { useAppContext } from '../util/context';
 
 const SearchBar = () => {
@@ -18,6 +19,7 @@ const SearchBar = () => {
           }}
         />
         {error.show && <div className='error'>{error.msg}</div>}
+        <Pokemon />
       </form>
     </div>
   );

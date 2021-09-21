@@ -4,6 +4,10 @@
 
 .pokemon-list {
   width: 20vw;
+  height: auto;
+  max-height: 30vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   .pokemon {
     display: grid;
     cursor: pointer;
@@ -16,6 +20,10 @@
     width: 20vw;
     &:hover {
       background-color: $clr-primary-4;
+
+      img {
+        transform: rotate(180deg);
+      }
     }
 
     .pokeName {
@@ -38,6 +46,7 @@
       position: relative;
       right: 0;
       width: 40px;
+      transition: $transition;
     }
   }
 }

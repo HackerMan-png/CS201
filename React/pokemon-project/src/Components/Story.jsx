@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { useStoryContext } from "../util/context";
+// import React, { useState } from "react";
+// import { useStoryContext } from "../util/context";
 
+// const Story = ({ story, id }) => {
+//   const {setStories, stories} = useStoryContext();
+//   return (
+//     <div className="pokemon-preview">
 
-const Story = ({ story, id }) => {
-  const {setStories, stories} = useStoryContext();
-  return (
-    <div className="pokemon-preview">
-      
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
-export default Story;
+// export default Story;
