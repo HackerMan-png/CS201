@@ -9,6 +9,8 @@ const Pokemon = () => {
 
   const {
     query,
+    pokemon,
+    setPokemon,
     setQuery,
     loading,
     pokemonList,
@@ -16,6 +18,10 @@ const Pokemon = () => {
     error,
     setShowPokemon,
     showPokemon,
+    reload,
+    setReload,
+    setPokemonName,
+    pokemonName,
   } = useAppContext();
 
   return (
@@ -29,6 +35,7 @@ const Pokemon = () => {
                 <Link
                   to={`/pokemon/${pokemon.name}`}
                   onClick={() => {
+                    setPokemonName(pokemon.name);
                     setShowPokemon(false);
                   }}
                 >

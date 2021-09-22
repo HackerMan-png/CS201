@@ -4,11 +4,13 @@ import { useFetch } from './useFetch';
 const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
+  const [pokemonName, setPokemonName] = useState('');
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(0);
+  const [reload, setReload] = useState(null);
   const [showPokemon, setShowPokemon] = useState(false);
-  const { setPokemon, pokemon, pokemonList, error, loading } = useFetch(
-    `pokemon/?limit=1118&offset=0`
+  const { loading, error, pokemonList, pokemon, setPokemon } = useFetch(
+    `pokemon/${pokemonName}`
   );
   // {console.log(`${movies} #4`)}
 
@@ -24,6 +26,10 @@ export const AppProvider = ({ children }) => {
         setShowPokemon,
         pokemon,
         setPokemon,
+        reload,
+        setReload,
+        pokemonName,
+        setPokemonName,
       }}
     >
       {children}
