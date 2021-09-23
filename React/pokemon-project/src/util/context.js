@@ -7,7 +7,6 @@ export const AppProvider = ({ children }) => {
   const [pokemonName, setPokemonName] = useState('');
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(0);
-  const [reload, setReload] = useState(null);
   const [showPokemon, setShowPokemon] = useState(false);
   const { loading, error, pokemonList, pokemon, setPokemon } = useFetch(
     `pokemon/${pokemonName}`
@@ -26,8 +25,6 @@ export const AppProvider = ({ children }) => {
         setShowPokemon,
         pokemon,
         setPokemon,
-        reload,
-        setReload,
         pokemonName,
         setPokemonName,
       }}

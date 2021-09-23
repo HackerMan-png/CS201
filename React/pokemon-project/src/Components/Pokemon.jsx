@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAppContext } from '../util/context';
 import pokeball from '../assets/pokeball.png';
 import { useFetch } from '../util/useFetch';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Pokemon = () => {
   const [curPokemon, setCurPokemon] = useState('');
@@ -18,8 +18,6 @@ const Pokemon = () => {
     error,
     setShowPokemon,
     showPokemon,
-    reload,
-    setReload,
     setPokemonName,
     pokemonName,
   } = useAppContext();
