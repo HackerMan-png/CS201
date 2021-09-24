@@ -1,0 +1,16 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: $clr-grey-8;
+  border-bottom: 2px solid $clr-black;
+  .searchbar {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+  }
+}

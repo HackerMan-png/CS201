@@ -8,7 +8,16 @@
   max-height: 30vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  background: $clr-primary-3;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .pokemon {
+    color: $clr-white;
     display: grid;
     cursor: pointer;
     grid-template-columns: repeat(3, 1fr);
@@ -18,6 +27,7 @@
     align-items: center;
     justify-content: space-between;
     width: 20vw;
+    border-bottom: 1px solid $clr-black;
     &:hover {
       background-color: $clr-primary-4;
 
@@ -27,6 +37,7 @@
     }
 
     .pokeName {
+      padding-left: 1rem;
       width: 10vw;
       align-self: center;
       // height: 100%;

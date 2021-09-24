@@ -6,6 +6,7 @@ import SearchBar from './Components/SearchBar';
 import Pokemon from './Components/Pokemon';
 import { pages } from './util/consts';
 import Home from './Pages/Home';
+import Navbar from './Components/Navbar';
 
 function App() {
   const {
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      <SearchBar />
+      <Navbar />
 
       <Switch>
         <Route exact path='/'>

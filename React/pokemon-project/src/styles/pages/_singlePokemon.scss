@@ -1,0 +1,155 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .pokemon-name {
+    text-align: center;
+  }
+
+  .sprite {
+    align-self: center;
+    border-radius: $radius;
+    background-color: $clr-grey-7;
+    border: 1px $clr-black solid;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 30vh;
+    }
+  }
+
+  .types {
+    display: flex;
+    // width: 10vw;
+    align-self: center;
+    color: $clr-white;
+    margin-top: 0.5rem;
+    .type {
+      width: 8vw;
+      text-align: center;
+      vertical-align: center;
+      border-radius: $radius;
+      &:first-of-type {
+        margin-right: 1rem;
+      }
+    }
+    .grass {
+      background: #78c850;
+    }
+    .fire {
+      background: #f08030;
+    }
+    .water {
+      background: #6890f0;
+    }
+    .bug {
+      background: #a8b820;
+    }
+    .normal {
+      background: #a8a878;
+    }
+    .poison {
+      background: #a040a0;
+    }
+    .electric {
+      background: #f8d030;
+    }
+    .ground {
+      background: #e0c068;
+    }
+    .fairy {
+      background: #ee99ac;
+    }
+    .fighting {
+      background: #c03028;
+    }
+    .psychic {
+      background: #f85888;
+    }
+    .rock {
+      background: #b8a038;
+    }
+    .ghost {
+      background: #705898;
+    }
+    .ice {
+      background: #98d8d8;
+    }
+    .dragon {
+      background: #7038f8;
+    }
+  }
+
+  .abilities {
+    // margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    h4 {
+      text-align: center;
+      width: 100vw;
+      padding-top: 1rem;
+    }
+    .ability {
+      width: 10vw;
+      height: 5vh;
+      background-color: $clr-grey-7;
+      border-radius: $radius;
+      display: flex;
+      vertical-align: center;
+      align-self: center;
+      justify-content: center;
+
+      p {
+        text-align: center;
+        align-self: center;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .physical-info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    h4 {
+      width: 100%;
+      text-align: center;
+    }
+
+    div {
+      background: $clr-grey-7;
+      width: 7vw;
+      text-align: center;
+      vertical-align: center;
+      border-radius: $radius;
+    }
+  }
+
+  .moves {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+    h3 {
+      width: 100vw;
+      text-align: center;
+    }
+    .move {
+      width: 20vw;
+      text-align: center;
+    }
+  }
+}

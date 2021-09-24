@@ -8,9 +8,8 @@ export const AppProvider = ({ children }) => {
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(0);
   const [showPokemon, setShowPokemon] = useState(false);
-  const { loading, error, pokemonList, pokemon, setPokemon } = useFetch(
-    `pokemon/${pokemonName}`
-  );
+  const { loading, setLoading, error, pokemonList, pokemon, setPokemon } =
+    useFetch(`pokemon/${pokemonName}`);
   // {console.log(`${movies} #4`)}
 
   return (
@@ -19,6 +18,7 @@ export const AppProvider = ({ children }) => {
         query,
         setQuery,
         loading,
+        setLoading,
         pokemonList,
         error,
         showPokemon,

@@ -33,6 +33,7 @@ export const useFetch = (searchQuery) => {
 
   return {
     loading,
+    setLoading,
     error,
     pokemonList,
     pokemon,
