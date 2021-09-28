@@ -9,7 +9,7 @@ const SingleMovie = () => {
   if (loading) {
     return <div className='loading'></div>;
   }
-  if (error.show) {
+  if (error​.show) {
     return (
       <div className='page-error'>
         <h1>{error.msg}</h1>
