@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "41b9a77a665a11a6",
+        "id": "8c6be377ea942a6c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Advanced Array Methods.md",
+            "file": "What is NodeJS.md",
             "mode": "source"
           }
         }
@@ -39,8 +39,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": false,
+                "query": "tag:#Unit1",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Advanced Array Methods.md",
+                "file": "What is NodeJS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,9 +86,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "41b9a77a665a11a6",
+  "active": "8c6be377ea942a6c",
   "lastOpenFiles": [
+    "What is NodeJS.md",
+    "React-Router.md",
+    "React.md",
+    "Untitled.md",
+    "Hooks.md",
     "Advanced Array Methods.md",
-    "Untitled.md"
+    "Fetch API.md",
+    "Props.md",
+    "Mobile First Web Design.md"
   ]
 }

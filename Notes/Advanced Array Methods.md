@@ -1,12 +1,12 @@
 #Unit1
 
-Advanced Array Methods
+# Advanced Array Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     This is just a quick reminder about how ternaties work, think of them as small if statements.
     {conditional ? truePath : falsePath}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Spread Operator
+### The Spread Operator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The spread operator (...) will iterate through and all values from an array-like object
 
@@ -26,7 +26,7 @@ bookV2 = {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mapping Arrays
+### Mapping Arrays
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 When you have an array with several items that you to break down the best way is .map()
 
@@ -37,7 +37,7 @@ The nice part of .map() is that it returns a whole new array when it's finished
 Other methods such as forEach() do not create new arrays and instead just paste content for the exiting array.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Anatomy of .map()
+### Anatomy of .map()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 let newArray = people.map((person) => {
 
@@ -56,7 +56,7 @@ return {...person, shirtColor: 'tie-dye', isNice: 'yes'};
 Next you can destructure your item if you like, this is not required but does make the setup easier.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.forEach()
+### .forEach()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 forEach doesn't return an array as an output.
 
@@ -74,7 +74,7 @@ Printing out every name that starts with A
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.filter()
+### .filter()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Filter is how you can remove certain items from your array
 
@@ -87,7 +87,7 @@ return continent.startsWith('A'
 -- This would return all the continents that start with the letter A
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.every()
+### .every()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const numbers = [-1, -2, 20, 40, 50]
 
@@ -98,14 +98,14 @@ numbers.every((num) => num < 100)
 This checks to make sure that EVERY value meets th condition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.some()
+### .some()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is very similar to .every but instead of checking all it checks in there are any that are true
 
 As long as one is true this will return a true statement.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.reduce()
+### .reduce()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 reduce() is a method that adds to an output, it finds the accumulation of a number.
 

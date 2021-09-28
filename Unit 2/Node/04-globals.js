@@ -3,5 +3,8 @@
 // console.log(process);
 
 const kids = ['jimmy', 'tommy'];
-module.exports = { kids };
+const num2 = '5';
+const num3 = '10';
+
+module.exports = { kids, num2, num3 };
 console.log(module);
