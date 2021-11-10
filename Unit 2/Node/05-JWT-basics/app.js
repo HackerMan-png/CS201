@@ -6,6 +6,8 @@
 const express = require('express');
 const router = require('./routes/login');
 const connect = require('./db/connect');
+const errorHandlerMiddleware = require('./middleware/error-handler');
+const notFound = require('./middleware/not-found');
 require('dotenv').config();
 require('express-async-errors');
 
@@ -14,7 +16,9 @@ const app = express();
 app
   .use(express.static('./public'))
   .use([express.urlencoded({ extended: false }), express.json()])
-  .use('/api/v1', router);
+  .use('/api/v1', router)
+  .use(errorHandlerMiddleware)
+  .use(notFound);
 
 const port = process.env.PORT || 3000;
 
