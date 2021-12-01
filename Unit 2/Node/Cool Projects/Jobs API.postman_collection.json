@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "f2ff3128-aee5-4e97-9361-8d0fda4ff0b8",
+		"name": "Jobs API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jimmy\",\r\n    \"email\": \"Jimmy11@gmail.com\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{AUTH_URL}}/register",
+							"host": [
+								"{{AUTH_URL}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json()\r",
+									"pm.globals.set('JobToken', jsonData.token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Jimmy11@gmail.com\",\r\n    \"password\": \"Password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{AUTH_URL}}/login",
+							"host": [
+								"{{AUTH_URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jobs",
+			"item": [
+				{
+					"name": "Create Job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{JobToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company\": \"Apple\",\r\n    \"position\": \"Full Stack Dev\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JOB_URL}}",
+							"host": [
+								"{{JOB_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{JobToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{JOB_URL}}",
+							"host": [
+								"{{JOB_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Job",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{JobToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{JOB_URL}}/:id",
+							"host": [
+								"{{JOB_URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "618c3e3ca6c7c7411841b71b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Job",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{JobToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{JOB_URL}}/:id",
+							"host": [
+								"{{JOB_URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6192c275873a0cab27dded27"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Job",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{JobToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company\": \"west-mec\",\r\n    \"status\": \"declined\",\r\n    \"position\": \"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{JOB_URL}}/:id",
+							"host": [
+								"{{JOB_URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6192c275873a0cab27dded27"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
